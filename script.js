@@ -1,4 +1,6 @@
 var numberOfTurns = 0;
+var seconds = 0
+var timerId;
 //function to shuffle the order of the cards on the page. variables "cards" is defined on line 34
 function shuffleCards(cards) {
   var currentIndex = cards.length;
@@ -25,9 +27,22 @@ function checkMatch(card1, card2) {
 //alert message for when you won the game - set numberOfTurns to 0 at start, numberOfTurns being counted every time a card is clicked.
 function checkEnd() {
   if ($('.matched').length == $('.card').length) {
-    alert('You won in ' + numberOfTurns + ' tries!'); //turn into div on side that keeps track in real time   $(".tracker").html("You won in" numberOfTurns "! ");
+    $(".tracker").text("You won in " + numberOfTurns + " turns! Think you can do better?");
+    $("body").addClass("winningpage")
+    $("#holder").empty(); //this should be the last inserted div only inserted at end of game to print number of tries.
   }
 }
+var updateTime = function() {
+  seconds++
+  $(".timer").html(seconds);
+}
+var startButton = function() {
+  if (seconds === 0) {
+    $(".timer").innerHTML = 0;
+  }
+  clearInterval(timerId)
+  timerId = setInterval(updateTime, 1000)
+};
 //sets up to play the game - shuffles board, hides card faces, adds class of 'selected' to chosen cards, checks for a match by comparing class (hardcoded into html)
 $(document).ready(function() {
   var cards = $('.card');
@@ -38,7 +53,8 @@ $(document).ready(function() {
   });
   $('div.card').click(function() {
     $(".tracker").empty();
-    $(".tracker").text("You won in " + numberOfTurns + " turns!"); //this should be the last inserted div only inserted at end of game to print number of tries.
+    $(".tracker").addClass("timer");
+    $(".tracker").on("click", startButton); //insert timer into lower div to keep track of how long it takes to win game
     if ($('.selected').length == 2) {
       $('.selected').removeClass('selected');
       $(this).children().addClass('selected');
@@ -57,4 +73,5 @@ $(document).ready(function() {
     e.preventDefault();
     window.location.reload();
   });
+
 });

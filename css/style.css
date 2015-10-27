@@ -33,6 +33,12 @@ body {
      background-color: #6d6d6d ;
      padding: 1em;
 }
+
+.winningpage{
+    background-image: url('../img/monalisa.jpg');
+    height:400px;
+}
+
 header{
 }
 #container {
@@ -60,8 +66,8 @@ h1 {
 
 #sidebar{
   border: 1px solid black;
-  width: 50%:
-  float:left;
+  background: gray;
+  opacity: .8;
 }
 .card{
      width: 100px;
