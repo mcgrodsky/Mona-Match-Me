@@ -1,5 +1,4 @@
 var numberOfTurns = 0;
-
 //function to shuffle the order of the cards on the page. variables "cards" is defined on line 34
 function shuffleCards(cards) {
   var currentIndex = cards.length;
@@ -19,17 +18,17 @@ function checkMatch(card1, card2) {
   var class1 = card1.attr('class');
   var class2 = card2.attr('class');
   if (class1 == class2) {
-    $('.selected').addClass('matched crossRotate').removeClass('selected card');///trying ot figure out how to get mona lisa photo to rotate on click
+    $('.selected').addClass('matched crossRotate').removeClass('selected card'); ///trying ot figure out how to get mona lisa photo to rotate on click
     checkEnd();
   }
 }
-//alert message for when you won the game - achieves
+//alert message for when you won the game - set numberOfTurns to 0 at start, numberOfTurns being counted every time a card is clicked.
 function checkEnd() {
   if ($('.matched').length == $('.card').length) {
-    alert('You won in ' + numberOfTurns + ' tries!'); //turn into div on side that keeps track in real time
+    alert('You won in ' + numberOfTurns + ' tries!'); //turn into div on side that keeps track in real time   $(".tracker").html("You won in" numberOfTurns "! ");
   }
 }
-//sets up to play the game - shuffles board, hides card faces, adds class of 'selected' to chosen cards, checks for a match
+//sets up to play the game - shuffles board, hides card faces, adds class of 'selected' to chosen cards, checks for a match by comparing class (hardcoded into html)
 $(document).ready(function() {
   var cards = $('.card');
   cards = shuffleCards(cards);
@@ -38,6 +37,8 @@ $(document).ready(function() {
     $('#holder').prepend(card);
   });
   $('div.card').click(function() {
+    $(".tracker").empty();
+    $(".tracker").text("You won in " + numberOfTurns + " turns!"); //this should be the last inserted div only inserted at end of game to print number of tries.
     if ($('.selected').length == 2) {
       $('.selected').removeClass('selected');
       $(this).children().addClass('selected');
@@ -51,10 +52,9 @@ $(document).ready(function() {
       $(this).children().addClass('selected');
     }
   });
-//reset button to reload page
+  //reset button to reload page
   $('#reset').click(function(e) {
     e.preventDefault();
     window.location.reload();
   });
-
 });
