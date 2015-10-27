@@ -15,7 +15,7 @@ function shuffleCards(cards) {
   }
   return cards;
 }
-//function to check it the cards are a match or not. Each card is assigned a class of their suite, and this function is comparing the class names to determine if its a match or not.
+//function to check if the cards are a match or not. Each card is assigned a class of their suite, and this function is comparing the class names to determine if its a match or not.
 function checkMatch(card1, card2) {
   var class1 = card1.attr('class');
   var class2 = card2.attr('class');
@@ -24,10 +24,11 @@ function checkMatch(card1, card2) {
     checkEnd();
   }
 }
-//alert message for when you won the game - set numberOfTurns to 0 at start, numberOfTurns being counted every time a card is clicked.
+//function to see if game is over, and if so executes some new HTML on page
 function checkEnd() {
   if ($('.matched').length == $('.card').length) {
-    $(".tracker").text("You won in " + numberOfTurns + " turns! Think you can do better?");
+    $("h1").removeClass("timer");
+    $(".tracker").text("You won in " + numberOfTurns + " turns, and " + seconds + " seconds! Think you can do better?");
     $("body").addClass("winningpage")
     $("#holder").empty(); //this should be the last inserted div only inserted at end of game to print number of tries.
   }
@@ -39,6 +40,7 @@ var updateTime = function() {
 var startButton = function() {
   if (seconds === 0) {
     $(".timer").innerHTML = 0;
+    $("#holder").removeClass("timerstop");
   }
   clearInterval(timerId)
   timerId = setInterval(updateTime, 1000)
@@ -51,10 +53,12 @@ $(document).ready(function() {
   cards.each(function(index, card) {
     $('#holder').prepend(card);
   });
+  $(".timerstop").bind("click", function(){
+    startButton();
+    $(this).unbind("click");
+  })
   $('div.card').click(function() {
     $(".tracker").empty();
-    $(".tracker").addClass("timer");
-    $(".tracker").on("click", startButton); //insert timer into lower div to keep track of how long it takes to win game
     if ($('.selected').length == 2) {
       $('.selected').removeClass('selected');
       $(this).children().addClass('selected');
@@ -73,5 +77,4 @@ $(document).ready(function() {
     e.preventDefault();
     window.location.reload();
   });
-
 });
