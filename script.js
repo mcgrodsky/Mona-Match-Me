@@ -53,7 +53,7 @@ $(document).ready(function() {
   cards.each(function(index, card) {
     $('#holder').prepend(card);
   });
-  $(".timerstop").bind("click", function(){
+  $(".timerstop").bind("click", function() {
     startButton();
     $(this).unbind("click");
   })
