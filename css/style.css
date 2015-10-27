@@ -89,7 +89,9 @@ h1 {
   display: block;
 }
 button {
-  /*save for later*/
+  padding: 1em;
+  border-radius: 20px;
+  margin: 1em;
 }
 
 /*.crossRotate {
