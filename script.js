@@ -24,6 +24,7 @@ function checkMatch(card1, card2) {
     checkEnd();
   }
 }
+
 //function to see if game is over, and if so executes some new HTML on page
 function checkEnd() {
   if ($('.matched').length == $('.card').length) {
@@ -55,6 +56,9 @@ var startButton = function() {
 };
 //sets up to play the game - shuffles board, hides card faces, adds class of 'selected' to chosen cards, checks for a match by comparing class
 $(document).ready(function() {
+  $("*").dblclick(function(e){
+    e.preventDefault();
+  });
   var cards = $('.card');
   cards = shuffleCards(cards);
   $('#holder').empty();
