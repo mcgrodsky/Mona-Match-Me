@@ -27,12 +27,20 @@ function checkMatch(card1, card2) {
 //function to see if game is over, and if so executes some new HTML on page
 function checkEnd() {
   if ($('.matched').length == $('.card').length) {
-    $("h1").removeClass("timer");
+    $("h2").removeClass("timer");
+    $("h1").empty();
     $(".tracker").text("You won in " + numberOfTurns + " turns, and " + seconds + " seconds! Think you can do better?");
     $("body").addClass("winningpage")
+    $("#sidebar").addClass("winningdiv")
     $("#holder").empty();
   }
 }
+$(function(){
+    $(".flyingdiv").addClass("active");
+});
+$(function(){
+    $(".flyingdiv2").addClass("active2");
+});
 var updateTime = function() {
   seconds++
   $(".timer").html(seconds);
