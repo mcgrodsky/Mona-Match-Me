@@ -34,12 +34,13 @@ body {
   font-family: 'Bad Script', cursive;
   background-color: #FFFFD5;
   padding: 1em;
-  border: 1px dashed gray;
-  box-shadow: 0 5px 5px #777;
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+  box-shadow: 5px 5px 5px #777;
   height: 730px;
   margin: 1em 0;
 }
-header{
+header {
   height: 4em;
   padding: 1em;
 }
@@ -47,12 +48,12 @@ header{
   background-image: url('../img/monalisa.jpg');
   height: 800px;
 }
-.winningdiv{
+.winningdiv {
   background-color: white;
   height: 7em;
   padding: 1em;
+  
 }
-
 #container {
   width: 960px;
   margin: auto;
@@ -63,10 +64,10 @@ h1 {
   font-family: 'Bad Script', cursive;
   text-align: center;
   font-size: 40px;
-  margin: 2px;
+  margin: 5em;
   margin-left: 200px;
 }
-h2{
+h2 {
   font-size: 26px;
   margin: 0;
 }
@@ -90,7 +91,7 @@ h2{
   opacity: .8;
   height: 7em;
   text-align: center;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 .card {
   width: 100px;
@@ -109,40 +110,44 @@ h2{
   width: 100%;
   height: 135px;
   display: none;
-
 }
 .card img.selected, .card img.matched {
   display: block;
 }
 button {
   padding: 1em;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: 1em;
-
+  background-image: -webkit-linear-gradient(top, #e07c45, #dbc1a2);
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  color:black;
 }
-.fa fa-paint-brush{
+button:hover {
+  background: #e07c45;
+  background-image: -webkit-linear-gradient(top, gray, #dbc1a2);
+}
+.fa fa-paint-brush {
   width: 30px;
 }
-.flyingdiv{
-width:400px;
-height:100px;
-transition-property: margin-left;
-transition-duration: 2s;
-  margin-left:-200px;
-}
-.active{
-margin: 0 0 0 140px;
-}
-.flyingdiv2{
-  width:200px;
-  height:100px;
+.flyingdiv {
+  width: 400px;
+  height: 100px;
   transition-property: margin-left;
   transition-duration: 2s;
-    margin-right:-800px;
-  }
-.active2{
-margin:0 500px 0 0;
+  margin-left: -200px;
 }
-.sidepic{
-  height:65px;
+.active {
+  margin: 0 0 0 140px;
+}
+.flyingdiv2 {
+  width: 200px;
+  height: 100px;
+  transition-property: margin-left;
+  transition-duration: 2s;
+  margin-right: 100px;
+}
+.active2 {
+  margin: 20px 500px 0 100px;
 }
