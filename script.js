@@ -1,7 +1,7 @@
 var numberOfTurns = 0;
 var seconds = 0
 var timerId;
-//function to shuffle the order of the cards on the page. variables "cards" is defined on line 34
+//function to shuffle the order of the cards on the page.
 function shuffleCards(cards) {
   var currentIndex = cards.length;
   var tempValue;
@@ -15,12 +15,12 @@ function shuffleCards(cards) {
   }
   return cards;
 }
-//function to check if the cards are a match or not. Each card is assigned a class of their suite, and this function is comparing the class names to determine if its a match or not.
+//function to check if the cards are a match or not.
 function checkMatch(card1, card2) {
   var class1 = card1.attr('class');
   var class2 = card2.attr('class');
   if (class1 == class2) {
-    $('.selected').addClass('matched crossRotate').removeClass('selected card'); ///trying ot figure out how to get mona lisa photo to rotate on click
+    $('.selected').addClass('matched').removeClass('selected card');
     checkEnd();
   }
 }
@@ -30,7 +30,7 @@ function checkEnd() {
     $("h1").removeClass("timer");
     $(".tracker").text("You won in " + numberOfTurns + " turns, and " + seconds + " seconds! Think you can do better?");
     $("body").addClass("winningpage")
-    $("#holder").empty(); //this should be the last inserted div only inserted at end of game to print number of tries.
+    $("#holder").empty();
   }
 }
 var updateTime = function() {
@@ -45,8 +45,9 @@ var startButton = function() {
   clearInterval(timerId)
   timerId = setInterval(updateTime, 1000)
 };
-//sets up to play the game - shuffles board, hides card faces, adds class of 'selected' to chosen cards, checks for a match by comparing class (hardcoded into html)
+//sets up to play the game - shuffles board, hides card faces, adds class of 'selected' to chosen cards, checks for a match by comparing class
 $(document).ready(function() {
+
   var cards = $('.card');
   cards = shuffleCards(cards);
   $('#holder').empty();
