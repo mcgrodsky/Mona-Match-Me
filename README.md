@@ -20,7 +20,7 @@ Project 1 - Matching Game
 <li>In general, I know my Javascript is messy. Like, really messy. This was how the game made sense to me. Would love to go over how to refactor.
 </ol>
 
-<h2>Approach, technologies used, etc</h2>
+<h3>Approach, technologies used, etc</h3>
 <ul>
 <li>Javascript is hard. Very hard. I knew that I had to keep my game as simple as possible to create a working product in 2 days.</li>
 <li>My first main goal was to create as set of divs containing images, and allow those to toggle when clicked. This was relatively easy</li>
