@@ -32,7 +32,7 @@ body {
   color: #FFFFD5;
   font-size: 12px;
   line-height: 1.4;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Bad Script', cursive;
   background-color: #FFFFD5;
   padding: 1em;
 }
@@ -48,7 +48,7 @@ header {}
 h1 {
   color: black;
   text-transform: uppercase;
-  font-family: 'Arial';
+  font-family: 'Bad Script', cursive;
   text-align: center;
 }
 #wrapper {
@@ -58,10 +58,12 @@ h1 {
 }
 #holder {
   padding: 15px 5px 5px 15px;
-  border: 2px solid #5FA8B7;
+  border: 2px solid #777;
   border-radius: 5px;
   float: left;
   background-color: #FFFFD5;
+  opacity: .9;
+  box-shadow: 0 10px 10px #777;
 }
 #sidebar {
   border: 1px solid black;

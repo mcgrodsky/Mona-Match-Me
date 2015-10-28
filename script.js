@@ -47,7 +47,6 @@ var startButton = function() {
 };
 //sets up to play the game - shuffles board, hides card faces, adds class of 'selected' to chosen cards, checks for a match by comparing class
 $(document).ready(function() {
-
   var cards = $('.card');
   cards = shuffleCards(cards);
   $('#holder').empty();
