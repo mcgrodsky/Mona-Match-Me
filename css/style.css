@@ -34,21 +34,21 @@ body {
   font-family: 'Bad Script', cursive;
   background-color: #FFFFD5;
   padding: 1em;
-  height: 800px;
 }
-header {
+header{
   height: 6em;
-  padding: 3em 6em;
+  padding: 2em;
 }
 .winningpage {
   background-image: url('../img/monalisa.jpg');
   height: 800px;
 }
-.winningdiv {
+.winningdiv{
   background-color: white;
   height: 7em;
   padding: 1em;
 }
+
 #container {
   width: 960px;
   margin: auto;
@@ -59,10 +59,10 @@ h1 {
   font-family: 'Bad Script', cursive;
   text-align: center;
   font-size: 40px;
-  margin: 5em;
-
+  margin: 2px;
+  margin-left: 200px;
 }
-h2 {
+h2{
   font-size: 26px;
   margin: 0;
 }
@@ -79,7 +79,6 @@ h2 {
   background-color: #FFFFD5;
   opacity: .9;
   box-shadow: 0 10px 10px #777;
-  margin-bottom:2em;
 }
 #sidebar {
   /*border: 1px solid black;
@@ -98,9 +97,9 @@ h2 {
   background-size: cover;
   background-repeat: none;
   border: #5FA8B7;
-  -webkit-box-shadow: 2px 6px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 6px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 6px 5px 0px rgba(244, 107, 39, 1);
+  -webkit-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 6px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 6px 5px 0px rgba(244,107,39,1);
 }
 .card img {
   width: 100%;
@@ -114,28 +113,27 @@ button {
   padding: 1em;
   border-radius: 20px;
   margin: 1em;
-  float:right;
 }
-.fa fa-paint-brush {
+.fa fa-paint-brush{
   width: 30px;
 }
-.flyingdiv {
-  width: 400px;
-  height: 100px;
+.flyingdiv{
+width:400px;
+height:100px;
+transition-property: margin-left;
+transition-duration: 2s;
+  margin-left:-200px;
+}
+.active{
+margin: 0 0 0 140px;
+}
+.flyingdiv2{
+  width:200px;
+  height:100px;
   transition-property: margin-left;
   transition-duration: 2s;
-  margin-left: -200px;
-}
-.active {
-  margin: 0 0 0 140px;
-}
-.flyingdiv2 {
-  width: 200px;
-  height: 100px;
-  transition-property: margin-left;
-  transition-duration: 2s;
-  margin-right: -50px;
-}
-.active2 {
-  margin: 1px;;
+    margin-right:-800px;
+  }
+.active2{
+margin:0 500px 0 0;
 }
