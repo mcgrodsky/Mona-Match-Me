@@ -19,3 +19,11 @@ Project 1 - Matching Game
 <li>If i double click a card quickly it is matching with itself and will stay turned over</li>
 <li>In general, I know my Javascript is messy. Like, really messy. This was how the game made sense to me. Would love to go over how to refactor.
 </ol>
+
+<h2>Approach, technologies used, etc</h2>
+<ul>
+<li>Javascript is hard. Very hard. I knew that I had to keep my game as simple as possible to create a working product in 2 days.</li>
+<li>My first main goal was to create as set of divs containing images, and allow those to toggle when clicked. This was relatively easy</li>
+<li>My next hurdle was figuring out a system to compare and match cards of the same value. This was extreemly challenging, and the only way i ended up getting it to work was to have my JS compare class names which were hardcoded in the HTML</li>
+<li>In general, i know my approach is not the most solid or sound. A goal would be to get all of my images in an array in JS.</li>
+</ul>
