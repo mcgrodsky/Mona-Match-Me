@@ -84,7 +84,7 @@ h2{
   /*border: 1px solid black;
   background: gray;*/
   opacity: .8;
-  height: 6em;
+  height: 7em;
   text-align: center;
 }
 .card {
@@ -113,6 +113,7 @@ button {
   padding: 1em;
   border-radius: 20px;
   margin: 1em;
+
 }
 .fa fa-paint-brush{
   width: 30px;
