@@ -1,7 +1,7 @@
 # Project1
 Project 1 - Matching Game
 
-//Traditional Card Matching Game in Javascript/Jquery, HTML, & CSS
+Traditional Card Matching Game in Javascript/Jquery, HTML, & CSS
 
 <h2> User Stories </h2>
 <ol>
